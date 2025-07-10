@@ -13,7 +13,6 @@ const markdownToHTML = (text) => {
 }
 
 /*Criando uma função para poder perguntar para a I.A*/
-/*async:Avisar que vai sair da aplicação para depois voltar para o codigo*/
 const perguntarIA = async (pergunta,materia,apiKey) => {
     /* Definindo o modelo, caso queira alterar depois */
     const model = "gemini-2.5-flash";
@@ -91,7 +90,6 @@ const perguntarIA = async (pergunta,materia,apiKey) => {
     # Pergunta
     - Aqui está a pergunta: ${pergunta}`;
     
-    /*Criando um array (???????????????)*/
     const contents=[{
         role: "user",
         parts: [{
@@ -120,7 +118,6 @@ const perguntarIA = async (pergunta,materia,apiKey) => {
     return data.candidates[0].content.parts[0].text
 }
 
-/*entender essa parte aqui, pois não faz sentido o pq q da certo */
 /*Função para clicar no botão para perguntar*/
 const enviarform = async (event) => {
     event.preventDefault();
