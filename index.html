@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lúmen</title>
+    <!--Favicon-->
+    <link rel="shortcut icon" href="./assets/favcon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+       <header>
+            <img src="./assets/logo.png" alt="Logo" class="pulsar-logo">
+       </header> 
+
+       <main>
+            <section>
+                <div>
+                    <h2>Assistente de Estudos</h2>
+                    <p>Faça qualquer pergunta sobre alguma materia escolar!</p>
+
+                    <form id="form" action="">
+                        <!--Espaço para o usuario colocar a chave da I.A-->
+                        <input id="apiKey" type="password" placeholder="Informe a API KEY do Gemini" required>
+
+                        <!--Opções de materias-->
+                        <select id="materiaSelect">
+                            <option value="">Selecione uma máteria</option>
+                            <option value="biologia">Biologia</option>
+                            <option value="filosofia">Filosofia</option>
+                            <option value="fisica">Física</option>
+                            <option value="geografia">Geografia</option>
+                            <option value="história">História</option>
+                            <option value="inglês">Inglês</option>
+                            <option value="matemática">Matemática</option>
+                            <option value="português">Português</option>
+                            <option value="química">Química</option>
+                            <option value="sociologia">Sociologia</option>
+                        </select>
+
+                        <!--Espaço para poder inserir a pergunra do usuario-->
+                        <input id="perguntaInput" type="text" placeholder="Ex.: Qual é a formula de bhaskara..." required>
+
+                        <!--Botão para poder concluir a pergunta-->
+                        <button id="askButton">
+                            Perguntar
+                        </button>
+
+                        <!--Resposta da I.A-->
+                        <div id="respostaIA" class="esconder">
+                            <div class="conteudo-resposta">
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+       </main>
+       <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+       <script src="./script.js"></script>
+</body>
+</html>

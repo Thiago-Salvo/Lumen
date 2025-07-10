@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*Tamanho da caixa=Largura da caixa em si+largura do preenchimento (Facilita a vida para não pensar tanto em calculo de altura de box)*/
+}
+
+body {
+    background-image: url("./assets/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto; /*largura da pagina:largura e altura(auto)*/
+    background-position: top center; /*Eixo x e y*/
+    background-color: #121214;
+    color: white;
+}
+
+body *, :root {
+    font-family: "Inter";
+    line-height: 160%;
+}
+
+header{
+    padding-top: 32px; /*Espaço interno da box do header*/
+    text-align: center;
+}
+
+header img{
+    width:15rem;  /*Largura da "caixa" da imagem*/
+}
+
+.pulsar-logo{
+    animation: pulsar-luz 3.5s ease-in-out infinite;
+}
+
+@keyframes pulsar-luz {
+    0% { filter: drop-shadow(0 0 5px rgba(255, 251, 0, 0.459)); }
+    50% { filter: drop-shadow(0 0 20px rgba(255, 255, 0, 0.8)); }
+    100% { filter: drop-shadow(0 0 5px rgba(255, 251, 0, 0.459)); }
+}
+
+main{
+    max-width: 36rem;
+    width: 90%;
+    margin: 3rem auto; /*1 valor=todos os lados - 2 valores= altura/largura - 3 valores= cima/lados/baixo - 4 valores= cima/esquerda/baixo/direita */
+}
+
+section{
+    background-image: linear-gradient(90deg/*90 gruas*/,#f9fd00 0%, #fcf836 50%, #fff16e 100%);
+    border-radius: 0.625rem;
+    padding-top: 4px;
+}
+
+section > div {
+    padding: 2rem;
+    padding-top: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #2a2334;
+}
+
+section h2{
+    letter-spacing: -0.47px;
+}
+
+section p{
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+
+/*Animações:*/
+main section{
+    opacity: 0;
+    transform:translateY(2rem);
+    animation-name: aparecer;/*Nome da animação deve ser igual ao nome dado quando usa o @keyframes*/
+    animation-duration: 700ms;
+    animation-fill-mode: forwards;/*Quando a animação acabar ele mantem as propiedades do inicio da animação*/
+}
+
+@keyframes aparecer{/*Animação para poder aparecer*/
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form {
+    display: flex;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+    margin: 1.25rem 0;
+}
+
+input, select{
+    all: unset;/*Retirar todas as definições anteriores*/
+    border: 2px solid #9147FF;
+    border-radius: 0.5rem;
+    padding: 0.675rem;
+    font-size: 0.875rem;
+    background-color: #00000060;
+}
+
+input {
+    flex: 1;
+}
+
+button{
+    width: 100%;
+    border: 0;
+    background-image: linear-gradient(245deg,#f9fd00 0%, #fcf836 50%, #fff16e 100%);
+    padding: 0.675rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.12px;
+
+    transition: all 0.3s;
+}
+
+button:hover{
+    cursor:pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 1rem rgba(255, 248, 107, 0.356);
+}
+
+button:disabled {
+    transition: initial;
+    transform: initial;
+    box-shadow: initial;
+    cursor: not-allowed;
+}
+
+#respostaIA{
+    background: rgb(0,0,0,0.4);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    border-left: 4px solid #e4e743;
+}
+
+#respostaIA p{
+    color: white;
+}
+
+#respostaIA ul {
+    opacity: 0.8;
+}
+
+.carregando{
+    animation: pulse 1s infinite;
+}
+
+.esconder{
+    display: none;
+}
+
+@keyframes pulse {
+    50% {
+        opacity: 0.5;
+    }
+}
