@@ -59,15 +59,20 @@ Este projeto foi construído com as seguintes tecnologias:
 
   - **Showdown.js:** Biblioteca para converter Markdown em HTML e formatar as respostas.
 
-## 📌Futuras atualizações
+## 📌 Futuras atualizações
+
 - **Interface**:
-    - Desenvolver uma navbar completa, que leva a paginas como:
-      - Tutorial completo de como obter sua API Key.
+    - Desenvolver uma navbar completa, que direcione para páginas como:
       - Página "Sobre", que descreve melhor a ideia do projeto.
       - Área do chatbot.
+    - Remover a exigência de uma API Key do usuário.
         
-- **Login:**
-  - Desenvolver um metodo que vincule uma conta google ao site, com o objetivo de salvar o histórico de conversas para ser consultado depois, caso ocorra uma duvida recorrente sobre algum conteúdo.
+- **Login**:
+  - Desenvolver um método que vincule uma conta Google ao site, com o objetivo de salvar o histórico de conversas, permitindo que o usuário consulte novamente em caso de dúvidas recorrentes sobre algum conteúdo.
+
+- **Mecânicas de Agente de I.A.**:
+  - Adicionar a funcionalidade de gerar resumos para o Notion, a partir da pergunta do usuário e da resposta da I.A.
+  - Adicionar a funcionalidade de criar flashcards para o Anki, gerando um deck de perguntas sobre o assunto para o usuário.
 
 ## 👨‍💻 Contribuição
 
